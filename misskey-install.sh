@@ -1,4 +1,4 @@
-#!/bin/bash -eu
+#!/bin/bash -euxo pipefail
 
 #
 # Copyright 2023 aqz/tamaina, Srgr0, joinmisskey
@@ -1174,6 +1174,7 @@ function install() {
         tput setaf 7;
 
         #Enable corepack
+	npm install -g corepack@latest
         corepack enable;
 
         #Check version
